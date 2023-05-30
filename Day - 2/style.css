@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=89288ef4b47127f7f34a5998b50e4470");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: cyan;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  display: flex;
+  margin-left: 57rem;
+}
+
+#content {
+  display: none;
+  margin-top: 20px;
+}
+
+.secret1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr{
+  margin: 20px 0;
+  border: 2px solid black;
+}
+
+.secret2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+h1 {
+  color: #333;
+  margin: 10px;
+}
+
+p {
+  color: #666;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  margin-right: 5px;
+  border: none;
+  cursor: pointer;
+}
