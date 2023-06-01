@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridBox {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 15px;
+}
+
+.div1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+p{
+    margin-left: 10px;
+    color: rgb(205, 205, 205);
+}
+
+#anime{
+    display: none;
+}
+
+h1{
+    color: black;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 63);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  display: flex;
+  margin-left: 40rem;
+}
+
+.myButton {
+  box-shadow: inset 0px -3px 7px 0px #29bbff;
+  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  background-color: #2dabf9;
+  border-radius: 3px;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 56px;
+  margin: 0 5px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+  background-color: #0688fa;
+}
+.myButton:active {
+  position: relative;
+}
