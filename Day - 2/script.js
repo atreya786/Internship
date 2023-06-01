@@ -41,3 +41,42 @@ hideBtn.addEventListener("click", () => {
     content.style.display = "";
   }
 });
+
+const arr = [
+  {
+    title: "Chicken Biryani",
+    description: "About Chicken Biryani Recipe: The easiest and quickest Biryani recipe, that you can cook in about 40 min.",
+    image: "https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg"
+  },
+  {
+    title: "Mutton Biryani",
+    description: "About Chicken Biryani Recipe: The easiest and quickest Biryani recipe, that you can cook in about 40 min.",
+    image: "https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg"
+  },
+  {
+    title: "Prawn Biryani",
+    description: "About Chicken Biryani Recipe: The easiest and quickest Biryani recipe, that you can cook in about 40 min.",
+    image: "https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg"
+  }
+]
+const div = document.createElement("div")
+div.className = "secret1"
+arr.map((item)=>{
+  const h1 = document.createElement("h1")
+  const p = document.createElement("p")
+  const image = document.createElement("img")
+  const hr = document.createElement("hr")
+  const btn = document.createElement("button")
+  btn.className = "myButton"
+  btn.innerText = "Add to Order Menu"
+  btn.addEventListener("click", ()=>{
+    alert(`Want to order ${item.title} ?`)
+  })
+
+  h1.innerText = item.title
+  p.innerText = item.description
+  image.src = item.image
+  div.append(h1, p, image,btn,hr)
+  content.append(div)
+})
+
