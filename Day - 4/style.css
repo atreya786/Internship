@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://d2w1ef2ao9g8r9.cloudfront.net/images/_1600x900_crop_center-center_82_line/Creative-Examples-of-Restaurant-Websites-HERO.png.webp");
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.right {
+  display: flex;
+  margin-left: 54rem;
+}
+
+.left {
+  display: flex;
+}
+
+nav h1 {
+  color: rgb(255, 106, 0);
+}
+
+.flexBox {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  font-size: 3rem;
+}
+
+span {
+  color: orangered;
+}
+
+.flexBox p {
+  font-size: 1.3rem;
+  width: 75%;
+}
+
+.myButton {
+  box-shadow: inset 0px -3px 7px 0px #29bbff;
+  background: linear-gradient(to bottom, #4554ff 5%, #203aff 100%);
+  background-color: #0022ff;
+  border-radius: 3px;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 56px;
+  margin: 0 5px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #386aff 5%, #2739ff 100%);
+  background-color: #062ffa;
+}
+.myButton:active {
+  position: relative;
+}
+
+#login, #signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+#login h1 {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+#login input {
+  width: 20%;
+  height: 2rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+
+#login button {
+  margin: 0.5rem;
+}
+
+#login h3 {
+  color: #ffffff;
+  margin: 0.5rem;
+}
+
+#signup h1 {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+#signup input {
+  width: 20%;
+  height: 2rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+
+#signup button {
+  margin: 0.5rem;
+}
+
+#signup h3 {
+  color: #ffffff;
+  margin: 0.5rem;
+}
+
+#content {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.secret1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr{
+  margin: 20px 0;
+  border: 2px solid rgb(255, 255, 255);
+  width: 80%;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
