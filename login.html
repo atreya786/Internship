@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day - 4 (June 1)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <div class="left">
+          <li>
+            <h1>Foodiee</h1>
+          </li>
+          <li>
+            <a href="./home.html">Home</a>
+          </li>
+        </div>
+      </ul>
+      <div class="right">
+        <a class="myButton" href="./signup.html">Register</a>
+        <a class="myButton" href="./login.html">Sign In</a>
+      </div>
+    </nav>
+    <div id="login">
+      <h1>Login to Your Account</h1>
+      <input type="email" id="email2" placeholder="Enter Email" />
+      <input type="password" id="password2" placeholder="Enter Password" />
+      <button id="myButton2" class="myButton">Login</button>
+      <h3>
+        Don't have an account ?
+        <span><a href="./signup.html">Register</a></span> here
+      </h3>
+    </div>
+    <script>
+      const email2 = document.getElementById("email2");
+      const password2 = document.getElementById("password2");
+      const button2 = document.getElementById("myButton2");
+      button2.addEventListener("click", () => {
+        fetch("http://localhost:5000/myData", {
+          method: "GET",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            for (let i = 0; i <= data.length; i++) {
+              if (
+                email2.value !== data[i].email &&
+                password2.value !== data[i].password
+              ) {
+                alert("Invalid Credentials");
+                break
+              } 
+              else if (
+                email2.value === data[i].email &&
+                password2.value === data[i].password
+              ) {
+                alert("Login Successful");
+                window.location.href = "./main.html"
+              } 
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
