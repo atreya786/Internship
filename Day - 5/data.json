@@ -1,0 +1,88 @@
+{
+  "myData": [
+    {
+      "id": 1,
+      "image": "https://wallpapercave.com/uwp/uwp906397.jpeg",
+      "title": "My Hero Academia",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "title": "Solo Leveling",
+      "description": "This is a perfect anime wallpaper for your desktop.",
+      "image": "https://i.pinimg.com/736x/4a/c7/f0/4ac7f08b36eaad458cc0c280cdb9d1bf.jpg",
+      "id": 2
+    },
+    {
+      "title": "One Piece",
+      "description": "This is a perfect anime wallpaper for your desktop.",
+      "image": "https://bestideadiy.com/wp-content/uploads/2023/05/desktop-wallpaper-aesthetic-anime-pfp-luffy-luffy-pfp.jpg",
+      "id": 3
+    },
+    {
+      "title": "Demon Slayer",
+      "description": "This is a perfect anime wallpaper for your desktop.",
+      "image": "https://w0.peakpx.com/wallpaper/349/96/HD-wallpaper-anime-demon-slayer-kimetsu-no-yaiba-michikatsu-tsugikuni-yoriichi-tsugikuni.jpg",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "image": "https://bestideadiy.com/wp-content/uploads/2023/05/NSC-header-mobile-300x300.jpg",
+      "title": "Naruto",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 6,
+      "image": "https://wallpapercave.com/uwp/uwp1281813.jpeg",
+      "title": "Attack On Titan",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 7,
+      "image": "https://wallpapercave.com/uwp/uwp1710378.jpeg",
+      "title": "Darling In The Franxx",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 8,
+      "image": "https://images6.alphacoders.com/130/1301165.jpg",
+      "title": "Jujutsu Kaisen",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 9,
+      "image": "https://wallpapercave.com/uwp/uwp955124.jpeg",
+      "title": "Assasination Classroom",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 10,
+      "image": "https://wallpapercave.com/uwp/uwp3453936.jpeg",
+      "title": "Dragon Ball",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 11,
+      "image": "https://wallpapercave.com/uwp/uwp2302427.jpeg",
+      "title": "Bunny Girl Senpai",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 12,
+      "image": "https://e0.pxfuel.com/wallpapers/451/687/desktop-wallpaper-megumin-waifu-anime-konosuba-thumbnail.jpg",
+      "title": "Kono Suba",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 13,
+      "image": "https://cutewallpaper.org/26/around-me-anime-wallpaper/771317034.jpg",
+      "title": "Don't Toy With Me Miss Nagatoro",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    },
+    {
+      "id": 15,
+      "image": "https://i.pinimg.com/736x/a6/1f/46/a61f4650c5beb4cc80aa31a867a729e1.jpg",
+      "title": "Kaguya Sama",
+      "description": "This is a perfect anime wallpaper for your desktop."
+    }
+  ]
+}
