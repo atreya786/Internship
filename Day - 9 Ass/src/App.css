@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+  background-color: black;
+  height: 100vh;
+}
+
+.add-form {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.add-form label {
+  margin: 1rem;
+}
+
+.add-form input {
+  width: 20rem;
+  margin: 1rem;
+}
+
+img {
+  aspect-ratio: 3 / 2;
+}
+
+.navbar-brand {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.body {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  /* align-self: stretch; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 384px;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1.7rem 1rem;
+  background: linear-gradient(180deg, #1d2630, rgba(15, 23, 31, 0));
+  border-radius: 16px;
+}
+
+.card-title {
+  color: white;
+}
+
+.mainBody {
+  background-color: black;
+}
+
+.mainBody h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+footer {
+  background-color: black;
+  color: rgb(167, 167, 167);
+}
+
+.pop-up {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.pop-up:hover {
+  transform: scale(1.1);
+}
