@@ -1,7 +1,7 @@
 import React from "react";
 
 const Card = ({ data, onEdit, onDelete }) => {
-  const handleEdit = (data) => {
+  const handleEdit = () => {
     onEdit(data);
   };
 

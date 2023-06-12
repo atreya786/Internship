@@ -36,26 +36,6 @@ function App() {
     i++;
   }
 
-  const handleEditSubmit = (data) => {
-    data.preventDefault();
-    console.log(data);
-    // setFormData(data);
-    fetch(`http://localhost:5000/animes/${data.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(editFormData),
-    })
-      .then((data) => {
-        console.log("Success:", data);
-        // onEdit(data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
-
   const getData = async () => {
     await fetch("http://localhost:5000/animes", {
       method: "GET",
@@ -128,15 +108,11 @@ function App() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleEditChange = (e) => {
-    setEditFormData({ ...editFormData, [e.target.name]: e.target.value });
-  };
-
   const handleAdd = () => {
     setForm(true);
   };
 
-  const handleEdit = (data) => {
+  const handleEdit = async (data) => {
     setEditFormData({
       name: data.name,
       main_protagonist: data.main_protagonist,
@@ -148,6 +124,26 @@ function App() {
     });
     console.log(editFormData);
     setEditForm(true);
+
+    // await fetch(`http://localhost:5000/animes/${data.id}`, {
+    //   method: "PATCH",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(editFormData),
+    // })
+    //   .then((data) => {
+    //     console.log("Success:", data);
+    //     console.log(editFormData);
+    //     getData();
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
+  };
+
+  const handleEditChange = (e) => {
+    setEditFormData({ ...editFormData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -215,7 +211,7 @@ function App() {
 
       {editForm && (
         <div className="add-form">
-          <form onSubmit={handleEditSubmit}>
+          <form>
             <div className="form-group d-flex">
               {" "}
               <label>Anime Name :</label>
@@ -287,7 +283,11 @@ function App() {
                 className="form-control"
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={handleEdit}
+            >
               Submit
             </button>
           </form>
