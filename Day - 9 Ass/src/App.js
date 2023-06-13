@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import { useParams } from "react-router-dom";
 
 function App() {
   const [animes, setAnimes] = useState([]);
@@ -9,6 +10,7 @@ function App() {
   const [searchStr, setSearchStr] = useState("");
   const [form, setForm] = useState(false);
   const [editForm, setEditForm] = useState(false);
+  const [idStr, setIdStr] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     main_protagonist: "",
@@ -19,6 +21,7 @@ function App() {
     image: "",
   });
   const [editFormData, setEditFormData] = useState({
+    id: "",
     name: "",
     main_protagonist: "",
     production_house: "",
@@ -108,42 +111,41 @@ function App() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleEditChange = (e) => {
+    setEditFormData({ ...editFormData, [e.target.name]: e.target.value });
+  };
+
   const handleAdd = () => {
     setForm(true);
   };
 
-  const handleEdit = async (data) => {
-    setEditFormData({
-      name: data.name,
-      main_protagonist: data.main_protagonist,
-      production_house: data.production_house,
-      rating: data.rating,
-      episodes: data.episodes,
-      short_description: data.short_description,
-      image: data.image,
+  const handleEdit = async (id) => {
+    setIdStr(id);
+    const obj = animes.filter((item) => {
+      return item.id === id;
     });
-    console.log(editFormData);
+    console.log(obj);
+    setEditFormData(obj[0]);
     setEditForm(true);
-
-    // await fetch(`http://localhost:5000/animes/${data.id}`, {
-    //   method: "PATCH",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(editFormData),
-    // })
-    //   .then((data) => {
-    //     console.log("Success:", data);
-    //     console.log(editFormData);
-    //     getData();
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error);
-    //   });
   };
 
-  const handleEditChange = (e) => {
-    setEditFormData({ ...editFormData, [e.target.name]: e.target.value });
+  // console.log("current",editFormData)
+  const handleUpdate = async () => {
+    try {
+      await fetch(`http://localhost:5000/animes/${idStr}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(editFormData),
+      }).then(() => {
+        alert("Success");
+        getData();
+        setEditForm(false);
+      });
+    } catch (error) {
+      alert(error);
+    }
   };
 
   const handleSubmit = (e) => {
@@ -211,7 +213,7 @@ function App() {
 
       {editForm && (
         <div className="add-form">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group d-flex">
               {" "}
               <label>Anime Name :</label>
@@ -286,7 +288,7 @@ function App() {
             <button
               type="submit"
               className="btn btn-primary"
-              onClick={handleEdit}
+              onClick={handleUpdate}
             >
               Submit
             </button>
@@ -374,8 +376,10 @@ function App() {
             <Card
               data={data}
               key={data.id}
-              onEdit={handleEdit}
-              onDelete={handleDelete}
+              handleEdit={() => {
+                handleEdit(data.id);
+              }}
+              handleDelete={handleDelete}
             />
           );
         })}

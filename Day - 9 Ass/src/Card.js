@@ -1,13 +1,13 @@
 import React from "react";
 
-const Card = ({ data, onEdit, onDelete }) => {
-  const handleEdit = () => {
-    onEdit(data);
-  };
+const Card = ({ data, handleDelete, handleEdit }) => {
+  // const handleEdit = () => {
+  //   onEdit(data);
+  // };
 
-  const handleDelete = () => {
-    onDelete(data);
-  };
+  // const handleDelete = () => {
+  //   onDelete(data);
+  // };
   return (
     <>
       <div className="mainBody">
